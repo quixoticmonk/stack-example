@@ -13,7 +13,7 @@ deployment "dev"{
 
 orchestrate "auto_approve" "no_changes"{
     check{
-        condition = context.plan.component_changes[*].total == 0
+        condition = context.plan.component_changes["component.events"].total == 0
         error_message = "Changes present in the plan"
     }
 }
