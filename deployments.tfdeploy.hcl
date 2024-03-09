@@ -10,7 +10,7 @@ deployment "dev"{
 
 }
 
-deployment "dev"{
+deployment "test"{
     variables ={
         topic_name="topic2"
         rule_name="rule2"
