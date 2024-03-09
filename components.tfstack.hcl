@@ -11,14 +11,14 @@ component "s3" {
     }
 }
 
-component "events" {
-    source = "./events"
-    inputs={
-        rule_name = var.rule_name   
-        topic_name = var.topic_name
-
-    }
-    providers={
-        aws= provider.aws.this
-    }
-}
+#component "events" {
+#    source = "./events"
+#    inputs={
+#        rule_name = var.rule_name   
+#        topic_name = var.topic_name
+#
+#    }
+#    providers={
+#        aws= provider.aws.this
+#    }
+#}
