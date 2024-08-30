@@ -11,9 +11,9 @@ provider "awscc" "this" {
   config {
     region = var.region
 
-    assume_role_with_web_identity {
+    assume_role_with_web_identity= {
       role_arn           = var.role_arn
-      web_identity_token = var.aws_token
+      web_identity_token_file = var.aws_token
     }
   }
 }
