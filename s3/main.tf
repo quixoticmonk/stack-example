@@ -1,13 +1,37 @@
-resource "aws_s3_bucket" "this" {
-  bucket = var.bucket_name
+resource "awscc_bedrock_guardrail" "example" {
+  name                      = var.name
+  blocked_input_messaging   = "Blocked input"
+  blocked_outputs_messaging = "Blocked output"
+  description               = "Example guardrail"
+
+  content_policy_config = {
+    filters_config = [
+      {
+        input_strength  = "MEDIUM"
+        output_strength = "MEDIUM"
+        type            = "HATE"
+      },
+      {
+        input_strength  = "HIGH"
+        output_strength = "HIGH"
+        type            = "VIOLENCE"
+      }
+    ]
+  }
+
+  tags = var.tags
 
 }
 
-variable "bucket_name" {
-  type        = string
-  description = "The name of the bucket"
+variable "name" {
+  type = string
+  description = "Name of the Guardrail"
 }
 
-output "bucket_name" {
-  value = aws_s3_bucket.this.bucket
+variable "tags" {
+  type = list(object({
+    key = string
+    value = string
+  }))
+  description = "tags"
 }

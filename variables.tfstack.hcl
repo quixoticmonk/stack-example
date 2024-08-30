@@ -1,14 +1,14 @@
-variable "bucket_name" {
-    type=string
-}
 
-variable "rule_name" {
+variable "name" {
   type = string
   
 }
 
-variable "topic_name" {
-  type = string
+variable "tags" {
+  type = list(object({
+    key = string
+    value = string
+  }))
 }
 
 variable "region" {

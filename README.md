@@ -1,2 +1,2 @@
 # stack-example
-TF stack example with S3 and events
+TF stack example with S3
