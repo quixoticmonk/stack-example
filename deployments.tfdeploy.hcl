@@ -1,6 +1,6 @@
 deployment "dev" {
   inputs = {
-    name = "manu-guard"
+    name = "manu-guard2"
     tags = [{
       key   = "Modified By"
       value = "AWSCC"
