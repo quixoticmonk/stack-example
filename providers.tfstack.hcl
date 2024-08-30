@@ -2,6 +2,7 @@
 required_providers {
   awscc = {
     source = "hashicorp/awscc"
+    version ="1.12.0"
   }
 
 }
