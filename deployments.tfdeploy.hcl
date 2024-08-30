@@ -4,7 +4,7 @@ deployment "dev"{
         rule_name="rule1"
         bucket_name="manu-s3-bucket-2024"
         region              = "us-east-1"
-        role_arn            = "arn:aws:iam::697621333100:role/stack_role"
+        role_arn            = "arn:aws:iam::697621333100:role/stacks-ne-devops-prj-r2DPuyvZf1Fx6nzZ-stack-example"
         identity_token_file = identity_token.aws.jwt_filename
 }
 
