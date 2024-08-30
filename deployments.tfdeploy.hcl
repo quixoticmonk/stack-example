@@ -18,7 +18,7 @@ deployment "test" {
       key   = "Modified By"
       value = "AWSCC"
     }]
-    region    = "us-east-2"
+    region    = "us-west-2"
     role_arn  = "arn:aws:iam::697621333100:role/stacks-ne-devops-prj-r2DPuyvZf1Fx6nzZ-stack-example"
     aws_token = identity_token.aws.jwt
   }
