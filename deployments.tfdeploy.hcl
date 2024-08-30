@@ -1,5 +1,5 @@
 deployment "dev"{
-    variables ={
+    inputs ={
         topic_name="topic1"
         rule_name="rule1"
         bucket_name="manu-s3-bucket-2024"
@@ -14,7 +14,7 @@ deployment "dev"{
 orchestrate "auto_approve" "no_changes"{
     check{
         condition = context.plan.component_changes["component.events"].total == 0
-        error_message = "Changes present in the plan"
+        reason = "Changes present in the plan"
     }
 }
 
