@@ -9,6 +9,7 @@ deployment "dev"{
 
 }
 
+}
 
 orchestrate "auto_approve" "no_changes"{
     check{
