@@ -32,7 +32,7 @@ identity_token "aws" {
 
 orchestrate "auto_approve" "no_changes"{
     check{
-        condition = context.plan.component_changes["component.s3"].total == 0
+        condition = context.plan.component_changes["component.guard"].total == 0
         reason = "Changes present in the plan"
     }
 }
