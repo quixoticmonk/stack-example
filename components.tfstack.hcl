@@ -1,5 +1,5 @@
-component "s3" {
-  source = "./s3"
+component "guard" {
+  source = "./guard"
   inputs = {
     name = var.name
     tags = var.tags

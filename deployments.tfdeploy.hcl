@@ -11,6 +11,19 @@ deployment "dev" {
   }
 }
 
+deployment "test" {
+  inputs = {
+    name = "manu-guard"
+    tags = [{
+      key   = "Modified By"
+      value = "AWSCC"
+    }]
+    region    = "us-east-2"
+    role_arn  = "arn:aws:iam::697621333100:role/stacks-ne-devops-prj-r2DPuyvZf1Fx6nzZ-stack-example"
+    aws_token = identity_token.aws.jwt
+  }
+}
+
 
 identity_token "aws" {
   audience = ["aws.workload.identity"]
